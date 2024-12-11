@@ -1,0 +1,27 @@
+amount of time: 15483855, time per pixel: 306
+Total Time: 129262330 ns, Time/Pixel: 1398 ns
+Total Time: -2147483648 ns, Time/Pixel: 43 ns
+Total Time: 8962053192 ns, Time/Pixel: 179 ns
+Total Time: 8185379837 ns, Time/Pixel: 163 ns
+Total Time: 10373084009 ns, Time/Pixel: 207 ns
+Total Time: 9197814754 ns, Time/Pixel: 184 ns
+- row
+180 Total Time: 3908151779 ns, Time/Pixel: 78 ns
+90 Total Time: 5184717428 ns, Time/Pixel: 103 ns
+0 Total Time: 3140999262 ns, Time/Pixel: 62 ns
+- col
+0 Total Time: 3106956942 ns, Time/Pixel: 62 ns
+90 Total Time: 5167822615 ns, Time/Pixel: 103 ns
+180 Total Time: 3912518121 ns, Time/Pixel: 78 ns
+- block ele (all 0 to 180)
+Total Time: 991047514 ns, Time/Pixel: 182 ns
+Total Time: 1180725451 ns, Time/Pixel: 217 ns
+Total Time: 1115476169 ns, Time/Pixel: 205 ns
+- row
+Total Time: 342042781 ns, Time/Pixel: 62 ns
+Total Time: 535762092 ns, Time/Pixel: 98 ns
+Total Time: 430927891 ns, Time/Pixel: 79 ns
+- col
+Total Time: 343496122 ns, Time/Pixel: 63 ns
+Total Time: 543062405 ns, Time/Pixel: 99 ns
+Total Time: 429193679 ns, Time/Pixel: 78 ns

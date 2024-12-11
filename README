@@ -1,0 +1,119 @@
+Names
+        Max Regardie (mregar01) and Prithvi Shahani (pshaha01)
+
+Acknowledgments
+        We recieved help from the lovely TA's in office hours
+        We used the solutions UArray2.c from the website
+
+Implementations
+        We believe everything required has been correctly implemented
+        We also believe that all the extra credit has been correctly 
+        implemented
+
+
+Architecture
+        For UArray2b we represented our 2D array with a UArray2 of UArray2's.
+        The reasoning for this was that we already had a functioning UArray2
+        which was represented as a one D UArray. So, we wanted to take 
+        advantage of all the functions that UArray2 had. We used the solutions 
+        version of UArray2
+
+        For ppm trans, we used the methods suite to call the mapping and 
+        rotation functions for each of the rotations. We wrote a different
+        mapping function for each of the rotations, but we used one function
+        to call all of them
+
+Part E
+
+Image size                      Timing Data (ns)             Computer Info
+-------------------------------------------------------------------------------
+                    |        Block Major             |  Name: ThinkCentre 
+   8160 x 6120      |  0: total time: 8185379837     |   TIO 24 Gen 4 en
+                    |   time per pixel: 163          |  
+                    |    ins/sec: 6134970            |
+                    |  90: total: 10373084009        |  CPU type: Intel(R) 
+                    |   time per pixel: 207          |   Core(TM) i7-10700T
+                    |     ins/sec: 4830918           |   
+                    |  180: total: 9197814754        |   
+                    |   time per pixel: 184          |   Clock Speed: 2.00 GHz 
+                    |    ins/sec: 5434783            |          
+                    |                                |   
+                    |         Col Major              |   
+                    |                                |      
+                    |  0: total time: 3106956942     | 
+                    |   time per pixel: 62           |  
+                    |   ins/sec: 16129033            |   
+                    |  90: total: 5167822615         |  
+                    |   time per pixel: 103          |
+                    |    ins/sec: 9708738            |      
+                    |  180: total: 3912518121        |   
+                    |   time per pixel: 78           |
+                    |    ins/sec: 12820513           |      
+                    |                                |      
+                    |           Row Major            |   
+                    |  0: total time: 3140999262     | 
+                    |   time per pixel: 62           | 
+                    |    ins/sec: 16129033           |    
+                    |  90: total: 5184717428         |   
+                    |   time per pixel: 103          | 
+                    |    ins/sec: 9708738            |       
+                    |  180: total: 3908151779        |   
+                    |   time per pixel: 78           | 
+                    |    ins/sec: 12820513           |               
+-------------------------------------------------------------------------------
+                    |        Block Major             |  Name: ThinkCentre 
+   2740 x 1984      |  0: total time: 991047514      |   TIO 24 Gen 4 en
+                    |   time per pixel: 182          |  
+                    |   ins/sec: 5494506             |   
+                    |  90: total: 1180725451         |  CPU type: Intel(R) 
+                    |   time per pixel: 217          |   Core(TM) i7-10700T
+                    |    ins/sec: 4608295            |   
+                    |  180: total: 1115476169        |   
+                    |   time per pixel: 205          |   Clock Speed: 2.00 GHz 
+                    |     ins/sec: 4878049           |          
+                    |                                |   
+                    |         Col Major              |   
+                    |                                |      
+                    |  0: total time: 343496122      | 
+                    |   time per pixel: 63           |  
+                    |     ins/sec: 15873016          |   
+                    |  90: total: 543062405          |  
+                    |   time per pixel: 99           |  
+                    |     ins/sec: 10101011          |    
+                    |  180: total: 429193679         |   
+                    |   time per pixel: 78           |
+                    |     ins/sec: 12820513          |        
+                    |                                |      
+                    |           Row Major            |   
+                    |  0: total time: 342042781      | 
+                    |   time per pixel: 62           | 
+                    |     ins/sec: 16129033          |    
+                    |  90: total: 535762092          |  
+                    |   time per pixel: 98           |  
+                    |      ins/sec: 10204082         | 
+                    |  180: total: 430927891         |   
+                    |   time per pixel: 79           |   
+                    |     ins/sec: 12658228          |                 
+-------------------------------------------------------------------------------
+
+Overall, block major is slower than col/row major for large images. This
+could be due to images being bigger than the blocks/cache size, resulting in
+more misses which makes block access slower than row/col access.
+
+However, it is interesting to note that the time/pixel is higher for the
+smaller image of the two.
+
+Along with that, it seems that the 90 degree rotations took more time on
+average, compared to 0 and 180 rotations. This could be due to the fact that
+90 rotate flips the axes of the image. Although 0 and 180 rotates have similar
+times, 0 takes less time because there are no calculations being made to swap
+the indices that the element is being mapped to.
+
+The first image tested was larger than the second image. As expected, it took
+more time for the first image in total, but the time per pixel is similar for
+both images in all tests respectively. However, it is interesting to note
+that as a result of similar times/pixels, the number of instructions per sec
+(estimated) is higher for the first image as compared to the second.
+
+Time Spent
+        45 hours
